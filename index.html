@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rowan Rossetti — CV pour rencontrer la bonne personne</title>
+
+  <meta name="description" content="Profil de Rowan : passions, valeurs, idées de rendez-vous et comment me contacter.">
+  <meta property="og:title" content="Rowan Rossetti — CV pour rencontrer la bonne personne">
+  <meta property="og:description" content="Animés, théâtre, natation, cuisine, voyages et amour des animaux.">
+  <meta property="og:type" content="profile">
+  <meta name="theme-color" content="#B39968">
+
+  <!-- garde ce chemin tel que dans ton projet (./css/style.css) -->
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header class="wrap header">
+    <div>
+      <h1>Rowan Rossetti</h1>
+      <p class="muted">Profil sincère, tourné vers la famille, les amis et les belles rencontres.</p>
+      <ul class="contact-list">
+        <li><a href="mailto:rowanrossetti3@gmail.com">rowanrossetti3@gmail.com</a></li>
+        <li><a href="https://www.instagram.com/el_siciliano1810/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://t.snapchat.com/ENbYEV9b" target="_blank" rel="noopener">Snapchat</a></li>
+      </ul>
+    </div>
+    <div class="header-actions">
+      <button class="btn" id="btnPrint" type="button">Version PDF</button>
+      <button class="btn outline" id="btnShare" type="button">Partager</button>
+    </div>
+  </header>
+
+  <main class="wrap grid">
+    <section class="card" id="about">
+      <h2>À propos</h2>
+      <p>
+        Je m’appelle Rowan. J’aime les animés, l’informatique, la natation, le théâtre
+        (en pratiquer et y aller), cuisiner et partager un bon repas, regarder des séries
+        et des films, lire, faire les magasins et voyager.
+        Je suis très proche de ma famille et de mes amis. J’apprécie les échanges profonds,
+        parler et écouter. Ma couleur préférée est le rouge et je tricote dès que j’en ai l’occasion.
+      </p>
+    </section>
+
+    <section class="card" id="pets">
+      <h2>Mes animaux</h2>
+      <ul class="list">
+        <li>Un chien</li>
+        <li>Un chat</li>
+        <li>Deux tortues</li>
+      </ul>
+      <p class="muted">J’aime les animaux en général, ils occupent une place importante dans ma vie.</p>
+    </section>
+
+    <section class="card" id="interests">
+      <h2>Centres d’intérêt</h2>
+      <ul class="chips">
+        <li>Animés</li>
+        <li>Théâtre</li>
+        <li>Natation</li>
+        <li>Tricot</li>
+        <li>Informatique</li>
+        <li>Cuisine</li>
+        <li>Restaurants</li>
+        <li>Séries et films</li>
+        <li>Lecture</li>
+        <li>Shopping</li>
+        <li>Voyages</li>
+        <li>Animaux</li>
+      </ul>
+    </section>
+
+    <section class="card" id="values">
+      <h2>Valeurs</h2>
+      <ul class="chips">
+        <li>Famille</li>
+        <li>Amis</li>
+        <li>Écoute</li>
+        <li>Sincérité</li>
+        <li>Respect</li>
+        <li>Partage</li>
+      </ul>
+    </section>
+
+    <section class="card" id="dates">
+      <h2>Idées de rendez-vous</h2>
+      <div class="ideas">
+        <button class="idea" data-idea="Dans un parc, assis à une table ou sur un banc avec table">Parc</button>
+        <button class="idea" data-idea="Cinéma puis discussion">Cinéma</button>
+        <button class="idea" data-idea="Dîner au restaurant">Restaurant</button>
+        <button class="idea" data-idea="Soirée conviviale à la maison">À la maison</button>
+        <button class="idea" data-idea="Dîner aux chandelles, simple et romantique">Dîner aux chandelles</button>
+      </div>
+      <p id="ideaOutput" class="muted">Clique sur un bouton pour afficher l’idée choisie.</p>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <p>© <span id="year"></span> Rowan Rossetti — Fait avec HTML, CSS et JavaScript</p>
+  </footer>
+
+  <template id="toast">
+    <div class="toast" role="status"></div>
+  </template>
+
+  <!-- garde ce chemin tel que dans ton projet (./javascript/script.js) -->
+  <script src="./javascript/script.js" defer></script>
+</body>
+</html>
