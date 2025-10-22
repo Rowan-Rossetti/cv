@@ -9,42 +9,48 @@
   <meta property="og:title" content="Rowan Rossetti — CV pour rencontrer la bonne personne">
   <meta property="og:description" content="Animés, théâtre, natation, cuisine, voyages et amour des animaux.">
   <meta property="og:type" content="profile">
-  <meta name="theme-color" content="#B39968">
+  <meta name="theme-color" content="#e10600">
+  <link rel="canonical" href="./" />
 
-  <!-- garde ce chemin tel que dans ton projet (./css/style.css) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
-  <header class="wrap header">
+  <!-- Particules -->
+  <canvas id="bgParticles" aria-hidden="true"></canvas>
+
+  <header class="wrap header" role="banner">
     <div>
-      <h1>Rowan Rossetti</h1>
-      <p class="muted">Profil sincère, tourné vers la famille, les amis et les belles rencontres.</p>
-      <ul class="contact-list">
+      <h1 class="brand js-split">Rowan Rossetti</h1>
+      <p class="muted lead">Profil sincère, tourné vers la famille, les amis et les belles rencontres.</p>
+      <ul class="contact-list" aria-label="Moyens de contact">
         <li><a href="mailto:rowanrossetti3@gmail.com">rowanrossetti3@gmail.com</a></li>
         <li><a href="https://www.instagram.com/el_siciliano1810/" target="_blank" rel="noopener">Instagram</a></li>
         <li><a href="https://t.snapchat.com/ENbYEV9b" target="_blank" rel="noopener">Snapchat</a></li>
       </ul>
     </div>
     <div class="header-actions">
-      <button class="btn" id="btnPrint" type="button">Version PDF</button>
-      <button class="btn outline" id="btnShare" type="button">Partager</button>
+      <button class="btn magnetic" id="btnPrint" type="button" aria-label="Imprimer en PDF">Version PDF</button>
+      <button class="btn outline magnetic" id="btnShare" type="button" aria-label="Partager cette page">Partager</button>
     </div>
   </header>
 
-  <main class="wrap grid">
-    <section class="card" id="about">
-      <h2>À propos</h2>
+  <main class="wrap grid" role="main">
+    <section class="card reveal tilt3d" id="about" aria-labelledby="about-title">
+      <h2 id="about-title" class="title-underline js-split">À propos</h2>
       <p>
         Je m’appelle Rowan. J’aime les animés, l’informatique, la natation, le théâtre
         (en pratiquer et y aller), cuisiner et partager un bon repas, regarder des séries
-        et des films, lire, faire les magasins et voyager.
-        Je suis très proche de ma famille et de mes amis. J’apprécie les échanges profonds,
-        parler et écouter. Ma couleur préférée est le rouge et je tricote dès que j’en ai l’occasion.
+        et des films, lire, faire les magasins et voyager. Je suis très proche de ma famille
+        et de mes amis. J’apprécie les échanges profonds, parler et écouter.
+        Ma couleur préférée est le <strong>rouge</strong> et je tricote dès que j’en ai l’occasion.
       </p>
     </section>
 
-    <section class="card" id="pets">
-      <h2>Mes animaux</h2>
+    <section class="card reveal tilt3d" id="pets" aria-labelledby="pets-title">
+      <h2 id="pets-title" class="title-underline js-split">Mes animaux</h2>
       <ul class="list">
         <li>Un chien</li>
         <li>Un chat</li>
@@ -53,58 +59,47 @@
       <p class="muted">J’aime les animaux en général, ils occupent une place importante dans ma vie.</p>
     </section>
 
-    <section class="card" id="interests">
-      <h2>Centres d’intérêt</h2>
-      <ul class="chips">
-        <li>Animés</li>
-        <li>Théâtre</li>
-        <li>Natation</li>
-        <li>Tricot</li>
-        <li>Informatique</li>
-        <li>Cuisine</li>
-        <li>Restaurants</li>
-        <li>Séries et films</li>
-        <li>Lecture</li>
-        <li>Shopping</li>
-        <li>Voyages</li>
-        <li>Animaux</li>
+    <section class="card reveal tilt3d" id="interests" aria-labelledby="interests-title">
+      <h2 id="interests-title" class="title-underline js-split">Centres d’intérêt</h2>
+      <ul class="chips" role="list">
+        <li>Animés</li><li>Théâtre</li><li>Natation</li><li>Tricot</li><li>Informatique</li>
+        <li>Cuisine</li><li>Restaurants</li><li>Séries et films</li><li>Lecture</li>
+        <li>Shopping</li><li>Voyages</li><li>Animaux</li>
       </ul>
     </section>
 
-    <section class="card" id="values">
-      <h2>Valeurs</h2>
-      <ul class="chips">
-        <li>Famille</li>
-        <li>Amis</li>
-        <li>Écoute</li>
-        <li>Sincérité</li>
-        <li>Respect</li>
-        <li>Partage</li>
+    <section class="card reveal tilt3d" id="values" aria-labelledby="values-title">
+      <h2 id="values-title" class="title-underline js-split">Valeurs</h2>
+      <ul class="chips" role="list">
+        <li>Famille</li><li>Amis</li><li>Écoute</li><li>Sincérité</li><li>Respect</li><li>Partage</li>
       </ul>
     </section>
 
-    <section class="card" id="dates">
-      <h2>Idées de rendez-vous</h2>
-      <div class="ideas">
-        <button class="idea" data-idea="Dans un parc, assis à une table ou sur un banc avec table">Parc</button>
-        <button class="idea" data-idea="Cinéma puis discussion">Cinéma</button>
-        <button class="idea" data-idea="Dîner au restaurant">Restaurant</button>
-        <button class="idea" data-idea="Soirée conviviale à la maison">À la maison</button>
-        <button class="idea" data-idea="Dîner aux chandelles, simple et romantique">Dîner aux chandelles</button>
+    <section class="card reveal tilt3d" id="dates" aria-labelledby="dates-title">
+      <h2 id="dates-title" class="title-underline js-split">Idées de rendez-vous</h2>
+      <div class="ideas" role="group" aria-label="Boutons d’idées de rendez-vous">
+        <button class="idea magnetic" data-idea="Dans un parc, assis à une table ou sur un banc avec table">Parc</button>
+        <button class="idea magnetic" data-idea="Cinéma puis discussion">Cinéma</button>
+        <button class="idea magnetic" data-idea="Dîner au restaurant">Restaurant</button>
+        <button class="idea magnetic" data-idea="Soirée conviviale à la maison">À la maison</button>
+        <button class="idea magnetic" data-idea="Dîner aux chandelles, simple et romantique">Dîner aux chandelles</button>
       </div>
-      <p id="ideaOutput" class="muted">Clique sur un bouton pour afficher l’idée choisie.</p>
+      <p id="ideaOutput" class="muted" aria-live="polite">Clique sur un bouton pour afficher l’idée choisie.</p>
     </section>
   </main>
 
-  <footer class="wrap footer">
+  <footer class="wrap footer" role="contentinfo">
     <p>© <span id="year"></span> Rowan Rossetti — Fait avec HTML, CSS et JavaScript</p>
   </footer>
 
   <template id="toast">
-    <div class="toast" role="status"></div>
+    <div class="toast" role="status" aria-live="polite"></div>
   </template>
 
-  <!-- garde ce chemin tel que dans ton projet (./javascript/script.js) -->
   <script src="./javascript/script.js" defer></script>
+
+  <!-- Animations avancées -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
 </body>
 </html>
